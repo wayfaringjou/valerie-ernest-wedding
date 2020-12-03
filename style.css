@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Charmonman&family=Parisienne&family=Rochester&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Utilities */
+.floral-background-left {
+  width: 50vw;
+  overflow: hidden;
+}
+
+.floral-background-left img {
+  position: fixed;
+  left: -8%;
+  bottom: -7%;
+  max-height: 100vh;
+  width: 100%;
+}
+
+.floral-background-right {
+  width: 50vw;
+  overflow: hidden;
+}
+
+.floral-background-right img {
+  position: fixed;
+  right: -8%;
+  top: -5%;
+  max-height: 100vh;
+  width: 100%;
+}
+
+.corner-ornament-left {
+  width: 50vw;
+  overflow: hidden;
+}
+
+.corner-ornament-left img {
+  position: fixed;
+  left: -2%;
+  top: -2%;
+  max-height: 100vh;
+  width: 100%;
+  max-width: 30vw;
+}
+
+.corner-ornament-right {
+  width: 50vw;
+  overflow: hidden;
+}
+
+.corner-ornament-right img {
+  position: fixed;
+  right: -2%;
+  bottom: -2%;
+  max-height: 100vh;
+  width: 100%;
+  max-width: 30vw;
+}
+
+.main-ornament {
+  height: 100vh;
+}
+
+.main-ornament img {
+  max-height: 120vh;
+  max-width: 150vw;
+  position: fixed;
+  min-height: 470px;
+  min-width: 633px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.xy-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.invitation {
+  text-align: center;
+  position: fixed;
+  width: 75vw;
+  /*max-width: 378px;*/
+}
+
+.invitation h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+  margin: 0;
+  font-size: clamp(1em, calc(1em + 1vw), 2em);
+  font-family: Parisienne;
+  color: #56979b;
+}
+
+.invitation .subtext-sm {
+  font-family: Charmonman;
+  font-size: clamp(
+    calc(1em / 1.618),
+    calc((1em + 1vw) / 1.618),
+    calc(1em / 1.618)
+  );
+  color: #3c3e4c;
+}
+
+.invitation .subtext-lg {
+  font-size: clamp(
+    calc(1em * 1.618),
+    calc((1em + 1vw) * 1.618),
+    calc(1em * 1.618)
+  );
+  color: #d4938d;
+}
+
+.invitation .ampersand {
+  font-family: Rochester;
+}
+
+.invitation h2 {
+  font-family: Charmonman;
+  font-size: clamp(
+    calc(1em / 1.618),
+    calc((1em + 1vw) / 1.618),
+    calc(1em / 1.618)
+  );
+  color: #3c3e4c;
+}
+
+.invitation h3 {
+  font-family: Charmonman;
+  font-size: clamp(
+    calc(1em / 1.618),
+    calc((1em + 1vw) / 1.618),
+    calc(1em / 1.618)
+  );
+  color: #3c3e4c;
+}
+
+.invitation h4 {
+  font-family: Charmonman;
+  font-size: clamp(
+    calc(1em / 1.618),
+    calc((1em + 1vw) / 1.618),
+    calc(2.5em / 1.618)
+  );
+  color: #d4938d;
+}
+
+footer {
+  position: fixed;
+  bottom: 1px;
+  left: 1px;
+  margin: 0;
+  padding: 0;
+  font-family: Charmonman;
+}
+
+footer a {
+  font-size: clamp(
+    calc(1em / 1.618),
+    calc((1em + 1vw) / 1.618),
+    calc(1em / 1.618)
+  );
+  color: #3c3c3c;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+@media only screen and (min-width: 375px) {
+  .corner-ornament-left img,
+  .corner-ornament-right img {
+    max-width: 30vw;
+  }
+
+  .invitation h1,
+  h2,
+  h3,
+  h4 {
+    font-size: clamp(1em, calc(1em + 2vw), 2em);
+  }
+
+  .invitation .subtext-sm {
+    font-size: clamp(
+      calc(1em / 1.618),
+      calc((1em + 2vw) / 1.618),
+      calc(2em / 1.618)
+    );
+  }
+
+  .invitation .subtext-lg {
+    font-size: clamp(
+      calc(1em * 1.618),
+      calc((1em + 2vw) * 1.618),
+      calc(1em * 1.618)
+    );
+  }
+
+  .invitation .ampersand {
+  }
+
+  .invitation h2 {
+    font-size: clamp(
+      calc(1em / 1.618),
+      calc((1em + 2vw) / 1.618),
+      calc(2em / 1.618)
+    );
+  }
+
+  .invitation h3 {
+    font-size: clamp(
+      calc(1em / 1.618),
+      calc((1em + 2vw) / 1.618),
+      calc(2em / 1.618)
+    );
+  }
+
+  .invitation h4 {
+    font-size: clamp(
+      calc(1em / 1.618),
+      calc((1em + 2vw) / 1.618),
+      calc(2em / 1.618)
+    );
+  }
+}
+
+@media only screen and (min-width: 478px) {
+  .floral-background-left img {
+    max-width: 85vw;
+  }
+  .floral-background-right img {
+    max-width: 85vw;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .floral-background-left img {
+    max-width: 78vw;
+  }
+  .floral-background-right img {
+    max-width: 78vw;
+  }
+  .corner-ornament-left img,
+  .corner-ornament-right img {
+    max-width: 20vw;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .floral-background-left img {
+    max-width: 68vw;
+  }
+  .floral-background-right img {
+    max-width: 68vw;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .floral-background-left img {
+    max-width: 58vw;
+  }
+  .floral-background-right img {
+    max-width: 58vw;
+  }
+  .corner-ornament-left img,
+  .corner-ornament-right img {
+    max-width: 20vw;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .floral-background-left img {
+    max-width: 50vw;
+  }
+  .floral-background-right img {
+    max-width: 50vw;
+  }
+  .corner-ornament-left img,
+  .corner-ornament-right img {
+    max-width: 522px;
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  .invitation h1,
+  h2,
+  h3,
+  h4 {
+    font-size: clamp(1em, calc(1em + 2vw), 1.75em);
+  }
+
+  .invitation .subtext-sm {
+    font-size: clamp(
+      calc(0.5em / 1.618),
+      calc((0.5em + 2vw) / 1.618),
+      calc(1em / 1.618)
+    );
+  }
+
+  .invitation .subtext-lg {
+    font-size: clamp(
+      calc(0.5em * 1.618),
+      calc((0.5em + 2vw) * 1.618),
+      calc(0.5em * 1.618)
+    );
+  }
+
+  .invitation .ampersand {
+  }
+
+  .invitation h2 {
+    font-size: clamp(
+      calc(0.7em / 1.618),
+      calc((0.7em + 2vw) / 1.618),
+      calc(1em)
+    );
+  }
+
+  .invitation h3 {
+    font-size: clamp(
+      calc(0.5em / 1.618),
+      calc((0.5em + 2vw) / 1.618),
+      calc(1em)
+    );
+  }
+
+  .invitation h4 {
+    font-size: clamp(
+      calc(0.5em / 1.618),
+      calc((1em + 2vw) / 1.618),
+      calc(0.8em)
+    );
+  }
+}

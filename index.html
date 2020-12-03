@@ -1,1 +1,46 @@
-Hello!
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <script src="https://cdn.polyfill.io/v3/polyfill.js?features=default,String.prototype.repeat,Array.prototype.find,Array.prototype.findIndex,Math.trunc,Math.sign,Object.is"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.25.0/build/global/luxon.min.js"></script>
+
+    <title>Valerie & Ernest's Wedding</title>
+  </head>
+  <body>
+    <div class="flex-row">
+    <div class="floral-background-left"><img src="./images/left-background-flowers.svg"></div>
+    <div class="floral-background-right"><img src="./images/right-background-flowers.svg"></div>
+    </div>
+
+    <div class="flex-row">
+      <div class="corner-ornament-left"><img src="./images/left-corner-ornament.png"></div>
+      <div class="corner-ornament-right"><img src="./images/right-corner-ornament.png"></div>
+    </div>
+    <main class="xy-centered main-ornament">
+     <img src="images/center-ornament.png">
+     <div class="invitation xy-centered">
+       <h1><span class="subtext-sm">Join us for the</span></br>
+         <span class="subtext-lg">Wedding of</span></br>
+         Valerie Sanchez</br> 
+         <span class="ampersand">&#38;</span></br>
+         Ernesto Del Cueto
+        </h1>
+       <h2 id="js-date">On December 18, 2020</h2>
+       <h3 id="js-time">at two o'clock in the afternoon ET</h3>
+      <h4>Livestream here in: <span id="js-countdown"></span></h4>
+       </div>
+     </div>
+    </main>
+    <footer>
+      <a href="https://www.freepik.com/vectors/floral"
+        >Floral vector created by:
+        pikisuperstar - www.freepik.com</a>
+    </footer>
+        <script src="./script.js"></script>
+  </body>
+</html>
