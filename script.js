@@ -31,12 +31,18 @@ const weddingTimeFullString = `${weddingHourString} ${weddingTimeCycleString}`;
 document.getElementById('js-date').innerText = `On ${weddingDayString}`
 document.getElementById('js-time').innerText = weddingTimeFullString; 
 
+let now = DateTime.local();
+let interval = luxon.Interval.fromDateTimes(now, theWeddingDate);
+let counter = interval.toDuration(['days', 'hours', 'minutes', 'seconds']).toObject()
+document.getElementById('js-countdown').innerText = `
+${counter.days}d ${counter.hours}h ${counter.minutes}m ${Math.floor(counter.seconds)}s`;
+
 const milliseconds = 1000
 setInterval(
   function callback() {
-    const now = DateTime.local();
-    const interval = luxon.Interval.fromDateTimes(now, theWeddingDate);
-    const counter = interval.toDuration(['days', 'hours', 'minutes', 'seconds']).toObject()
+    now = DateTime.local();
+    interval = luxon.Interval.fromDateTimes(now, theWeddingDate);
+    counter = interval.toDuration(['days', 'hours', 'minutes', 'seconds']).toObject()
     document.getElementById('js-countdown').innerText = `
     ${counter.days}d ${counter.hours}h ${counter.minutes}m ${Math.floor(counter.seconds)}s`;
   },
